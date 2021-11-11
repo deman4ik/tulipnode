@@ -3052,7 +3052,7 @@ int ti_macd(int size, TI_REAL const *const *inputs, TI_REAL const *options, TI_R
     const int signal_period = (int)options[2];
     if (short_period < 1) return TI_INVALID_OPTION;
     if (long_period < 2) return TI_INVALID_OPTION;
-    if (long_period < short_period) return TI_INVALID_OPTION;
+    //if (long_period < short_period) return TI_INVALID_OPTION;
     if (signal_period < 1) return TI_INVALID_OPTION;
     if (size <= ti_macd_start(options)) return TI_OKAY;
     TI_REAL short_per = 2 / ((TI_REAL)short_period + 1);
